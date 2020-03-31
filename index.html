@@ -20,12 +20,14 @@
             <a-asset-item id="beer" src="beer/model.gltf"></a-asset-item>
             <a-asset-item id="leo" src="leonardo/leonardodicaprio.gltf"></a-asset-item>
             <a-asset-item id="pedestal" src="pedestal/pillar.gltf"></a-asset-item>
+            <a-asset-item id="painting" src="painting/model.gltf"></a-asset-item>
             <img id="wood" src="textures/wood.jpg">
             <img id="brick" src="textures/brick.jpg">
             <img id="sky" src="textures/sky.jpg">
             <img id="boris" src="textures/Boris_Zombies.png">
             <img id="homeThumbnail" src="textures/Boris_Zombies.png">
-            <img id="ceiling" src="textures/DarkPlank.jpg">
+            <img id="leo2" src="textures/leo.png">
+
         </a-assets>
         <a-camera>
             <a-entity data-aframe-default-light="" aframe-injected="" position=""></a-entity>
@@ -48,9 +50,13 @@
         <a-entity data-brackets-id="3836" position="-9.69516 1.40671 11.80394" rotation="9.16 90 0" gltf-model="xbox/1307%20Xbox%20Controller.gltf" scale="0.02 0.02 0.02"></a-entity>
         <a-entity data-brackets-id="3837" position="-10.9711 0.10477 11.57281" rotation="" gltf-model="beer/model.gltf"></a-entity>
         <a-entity data-brackets-id="4541" position="10.99794 2.52582 5.92743" rotation="0 270 0" gltf-model="leonardo/leonardodicaprio.gltf" scale="4 3 4"></a-entity>
-        <a-entity data-brackets-id="4452" position="11.08589 0 5.94883" rotation="" gltf-model="pedestal/pillar.gltf" scale="0.3 0.3 0.29"></a-entity>
+        <a-cylinder position="11.06922 0.68524 5.96444" rotation="" material="" geometry="" scale="0.43 2.88 0.43" color="#999999"></a-cylinder>
+        <a-box position="13.88652 4.15593 3.30818" rotation="" material="" geometry="" scale="0.23 3.46 2.92" src="#leo2"></a-box>
+
         <a-box data-brackets-id="4166" position="13.95991 4.49543 0.00859" rotation="0 90 0" src="#brick" color="" material="" geometry="" scale="28 9 0.15"></a-box>
         <a-link href="http://www.liam-edwards.dk/WebGL/" title="" image="#homeThumbnail" position="-13.44033 4.51092 11.21083" rotation="0 90 0" geometry="primitive: circle; segments: 64" material="shader: portal; pano: http://127.0.0.1:56631/textures/Boris_Zombies.png; side: double" link="" scale="1 1 0.00001">
+        </a-link>
+        <a-link href="http://www.liam-edwards.dk/UN_A_Frame/" title="" image="#homeThumbnail" position="13.67089 4.51092 8.83949" rotation="0 270 0" geometry="primitive: circle; segments: 64" material="shader: portal; pano: http://127.0.0.1:56631/textures/Boris_Zombies.png; side: double" link="" scale="1 1 0.00001">
         </a-link>
     </a-scene>
 
