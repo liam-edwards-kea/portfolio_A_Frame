@@ -14,19 +14,20 @@
         <a-assets>
             <a-asset-item id="pikachu" src="archive/model.gltf"></a-asset-item>
             <a-asset-item id="desk" src="desk/model.gltf"></a-asset-item>
+            <a-asset-item id="window" src="window/model.gltf"></a-asset-item>
             <img id="wood" src="textures/wood.jpg">
             <img id="brick" src="textures/brick.jpg">
+            <img id="sky" src="textures/sky.jpg">
         </a-assets>
-        <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
         <a-box data-brackets-id="2380" position="-0.06362 4.49543 -13.95458" rotation="" src="#brick" color="#ffffff" material="" geometry="" scale="28 9 0.15"></a-box>
         <a-box data-brackets-id="2510" position="-0.06362 4.49543 14.06108" rotation="" src="#brick" color="#ffffff" material="" geometry="" scale="28 9 0.15"></a-box>
         <a-box data-brackets-id="2447" position="13.95991 4.49543 0.00859" rotation="0 90 0" src="#brick" color="#ffffff" material="" geometry="" scale="28 9 0.15"></a-box>
         <a-box data-brackets-id="2425" position="-14.03154 4.49543 0.12905" rotation="0 90 0" src="#brick" color="#ffffff" material="" geometry="" scale="28 9 0.15"></a-box>
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-box data-brackets-id="3230" position="13.93482 5.08789 -5.6469" rotation="" src="#sky" material="" geometry="" scale="0.13 2.8 2.94"></a-box>
         <a-plane data-brackets-id="2342" position="0 0.01743 -0.04509" rotation="-90 0 0" src="#wood" width="4" height="4" color="#8B4513" material="#wood" geometry="" scale="7 7 6"></a-plane>
-        <a-entity data-brackets-id="2976" position="-12.90676 0 -11.76191" roatation="" gltf-model="desk/model.gltf" scale="1.5 1.5 1.5"></a-entity>
-        <a-entity position="" roatation="" gltf-model="#desk"></a-entity>
+        <a-entity data-brackets-id="2324" position="0 1.60013 0" rotation="" gltf-model="archive/model.gltf"></a-entity>
+      <a-entity data-brackets-id="2976" position="-12.90676 0 -11.76191" roatation="" gltf-model="desk/model.gltf" scale="1.5 1.5 1.5"></a-entity>
+        <a-entity data-brackets-id="3205" position="12.5188 -1.63077 -9.86076" rotation="" gltf-model="window/model.gltf" scale="1 5.0001 6"></a-entity>
         <a-sky color="#ECECEC"></a-sky>
     </a-scene>
 
