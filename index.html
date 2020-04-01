@@ -7,6 +7,23 @@
     <title>Portfolio_A_Frame</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent('play-pause', {
+            init: function() {
+                var myVideo = document.querySelector('#euroman');
+                var videoControls = document.querySelector('#videoControls');
+                this.el.addEventListener('click', function() {
+                    if (myVideo.paused) {
+                        myVideo.play();
+                        videoControls.setAttribute('src', '#pause');
+                    } else {
+                        myVideo.pause();
+                        videoControls.setAttribute('src', '#play');
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -42,12 +59,18 @@
             <img id="me" src="textures/me%20copy.png">
             <img id="vans" src="textures/Vans%20Wallpaper.jpeg">
             <img id="poster" src="textures/_.jpeg">
+            <audio id="acoustic" src="Jon%20Gomm%20-%20Ain't%20Nobody%20(Chaka%20Khan).mp3" preload="auto"></audio>
+            <video id="euroman" loop="true" src="video/Group_007%20copy.mp4"></video>
 
         </a-assets>
         <a-camera>
             <a-entity data-aframe-default-light="" aframe-injected="" position=""></a-entity>
             <a-cursor></a-cursor>
         </a-camera>
+        <a-video data-brackets-id="473" src="#euroman" width="8" height="8" position="7.92463 5.3382 -13.84081" material="" geometry="" scale="0.5 0.5 0.5">
+            <a-image data-brackets-id="474" id="videoControls" src="#pause" position="-0.08164 -4.74262 0" scale="2 2 2.5" play-pause="" material="" geometry="">
+            </a-image>
+        </a-video>
         <a-entity light="type: ambient; color: #2d2f0b"></a-entity>
         <a-box data-brackets-id="2380" position="-0.06362 4.49543 -13.95458" rotation="" src="#brick" color="" material="" geometry="" scale="28 9 0.15"></a-box>
         <a-box data-brackets-id="2510" position="-0.06362 4.49543 14.06108" rotation="" src="#brick" color="" material="" geometry="" scale="28 9 0.15"></a-box>
@@ -73,7 +96,8 @@
         <a-entity position="-13.34347 4.90022 2.83869" rotation="" gltf-model="plant/scene.gltf"></a-entity>
         <a-entity position="12.39168 -0.86263 13.09402" rotation="" gltf-model="wk8_plant_eades/scene.gltf" scale="0.35 0.35 0.35"></a-entity>
         <a-entity position="4.23149 1.17262 13.81313" rotation="0 180 0" gltf-model="piano/scene.gltf" scale="2 2 2"></a-entity>
-        <a-entity position="1.30075 0.89266 12.17519" rotation="0 210.00000000000003 0" gltf-model="yamaha_f310/scene.gltf" scale="0.3 0.3 0.3"></a-entity>
+        <a-entity position="1.30075 0.89266 12.17519" rotation="0 210.00000000000003 0" gltf-model="yamaha_f310/scene.gltf" scale="0.3 0.3 0.3" sound="src:#acoustic; on: click"></a-entity>
+        <a-entity position="-12.44561 0.4094 -1.65913" rotation="0 -18.77 45" gltf-model="skateboard_01/scene.gltf" scale="1.5 1.5 1.5"></a-entity>
         <a-cylinder position="11.06922 0.68524 5.96444" rotation="" material="" geometry="" scale="0.43 2.88 0.43" color="#999999"></a-cylinder>
         <a-box position="13.88652 4.15593 3.30818" rotation="" material="" geometry="" scale="0.23 3.46 2.92" src="#leo2"></a-box>
         <a-box data-brackets-id="4166" position="13.95991 4.49543 0.00859" rotation="0 90 0" src="#brick" color="" material="" geometry="" scale="28 9 0.15"></a-box>
@@ -89,6 +113,7 @@
         </a-link>
         <a-link href="" title="" image="#homeThumbnail" position="-7.90812 3.89701 -13.84028" rotation="0 180 0" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; pano: http://127.0.0.1:56631/textures/Boris_Zombies.png" link="" scale="0.5 0.5 0.00001">
         </a-link>
+        <a-sky src="#sky"></a-sky>
 
     </a-scene>
 
